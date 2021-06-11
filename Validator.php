@@ -19,6 +19,12 @@ class ValidatedDate{
 }
 
 class DateValidator {
+
+    /**
+     * I intend to keep this regex quite simple with it only checking that there
+     * are the correct number of digits in the correct format seperated by a slash. 
+     * Whether those digits are in range or not I leave to PHPs checkdate method.
+     */ 
     private const REGEX_DATE = '/^\d{2}\/\d{2}\/\d{4}$/';
 
     static function validateHistoricalDate($date){
