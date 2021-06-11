@@ -19,7 +19,7 @@ class ValidatedDate{
 }
 
 class DateValidator {
-    private const REGEX_DATE = '/\d{2}\/\d{2}\/\d{4}/';
+    private const REGEX_DATE = '/^\d{2}\/\d{2}\/\d{4}$/';
 
     static function validateHistoricalDate($date){
         $isValid = preg_match(self::REGEX_DATE, $date);
