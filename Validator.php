@@ -11,7 +11,7 @@ class ValidatedDate{
     }
 
     function getMessage(){
-        if($this->isValid == true)
+        if($this->isValid)
             return "This date has been successfully validated";
         else
             return "This date has failed validation";
@@ -24,7 +24,7 @@ class DateValidator {
     static function validateHistoricalDate($date){
         $isValid = preg_match(self::REGEX_DATE, $date);
 
-        if($isValid == 1){
+        if($isValid){
             $parts = explode("/", $date);
 
             $day = $parts[0];
