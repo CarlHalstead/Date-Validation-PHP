@@ -18,6 +18,23 @@ class ValidatedDate{
     }
 }
 
+/**
+ * If we were unable to use checkdate for whatever reason
+ * then the way I would process the date as follows:
+ * 
+ * 1) Array of days in each month. e.g
+ * 
+ * $daysInMonths = [
+ *      1 => 31,
+ *      2 => 28...
+ * ];
+ * 
+ * 2) Validate user input using regex
+ * 3) Split input into the day, month and year
+ * 4) Ensure month is in the range 1 -> 12
+ * 5) Ensure day is in the range 1 -> $daysInMonth[month] (+1 if April and a leap year)
+ * 6) Ensure year is in range (e.g. only allow dates in the past) 
+ */ 
 class DateValidator {
 
     /**
