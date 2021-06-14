@@ -32,7 +32,7 @@ class ValidatedDate{
  * 2) Validate user input using regex
  * 3) Split input into the day, month and year
  * 4) Ensure month is in the range 1 -> 12
- * 5) Ensure day is in the range 1 -> $daysInMonth[month] (+1 if April and a leap year)
+ * 5) Ensure day is in the range 1 -> $daysInMonth[month] (+1 if February and a leap year)
  * 6) Ensure year is in range (e.g. only allow dates in the past) 
  */ 
 class DateValidator {
